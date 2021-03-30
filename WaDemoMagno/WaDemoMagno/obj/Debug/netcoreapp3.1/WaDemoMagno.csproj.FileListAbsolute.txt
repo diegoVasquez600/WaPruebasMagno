@@ -1,0 +1,5 @@
+C:\Users\diego\source\repos\WaPruebasMagno\WaDemoMagno\WaDemoMagno\obj\Debug\netcoreapp3.1\WaDemoMagno.csprojAssemblyReference.cache
+C:\Users\diego\source\repos\WaPruebasMagno\WaDemoMagno\WaDemoMagno\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\diego\source\repos\WaPruebasMagno\WaDemoMagno\WaDemoMagno\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\diego\source\repos\WaPruebasMagno\WaDemoMagno\WaDemoMagno\obj\Debug\netcoreapp3.1\WaDemoMagno_MarkupCompile.cache
+C:\Users\diego\source\repos\WaPruebasMagno\WaDemoMagno\WaDemoMagno\obj\Debug\netcoreapp3.1\WaDemoMagno_MarkupCompile.lref
