@@ -1,0 +1,5 @@
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\Business\bin\Debug\Business.dll
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\Business\bin\Debug\Business.pdb
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\Business\obj\Debug\Business.dll
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\Business\obj\Debug\Business.pdb

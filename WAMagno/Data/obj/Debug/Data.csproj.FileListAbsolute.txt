@@ -1,0 +1,5 @@
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\Data\bin\Debug\Data.dll
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\Data\bin\Debug\Data.pdb
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\Data\obj\Debug\Data.dll
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\Data\obj\Debug\Data.pdb
