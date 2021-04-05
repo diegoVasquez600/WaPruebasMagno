@@ -30,6 +30,11 @@ namespace WAMagno.UI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonBuscar = new System.Windows.Forms.Button();
+            this.txtCodigoBodega = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtReferencia = new System.Windows.Forms.TextBox();
+            this.lblRef = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.fechaFinal = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,19 +43,25 @@ namespace WAMagno.UI
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridPronostico = new DevExpress.XtraGrid.GridControl();
             this.gvPronostico = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.lblRef = new System.Windows.Forms.Label();
-            this.txtReferencia = new System.Windows.Forms.TextBox();
-            this.txtCodigoBodega = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.buttonBuscar = new System.Windows.Forms.Button();
+            this.magnoDataSet1 = new WAMagno.MagnoDataSet();
+            this.colDia = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStock = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStock_Inicial = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colADU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCodigo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colReferencia = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCantTotalInsumo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPronostico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPronostico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magnoDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Controls.Add(this.buttonBuscar);
             this.panel1.Controls.Add(this.txtCodigoBodega);
             this.panel1.Controls.Add(this.label4);
@@ -66,6 +77,48 @@ namespace WAMagno.UI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(209, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // buttonBuscar
+            // 
+            this.buttonBuscar.Location = new System.Drawing.Point(128, 299);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscar.TabIndex = 9;
+            this.buttonBuscar.Text = "Buscar";
+            this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
+            // 
+            // txtCodigoBodega
+            // 
+            this.txtCodigoBodega.Location = new System.Drawing.Point(6, 259);
+            this.txtCodigoBodega.Name = "txtCodigoBodega";
+            this.txtCodigoBodega.Size = new System.Drawing.Size(197, 20);
+            this.txtCodigoBodega.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 234);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Código Bodega";
+            // 
+            // txtReferencia
+            // 
+            this.txtReferencia.Location = new System.Drawing.Point(6, 197);
+            this.txtReferencia.Name = "txtReferencia";
+            this.txtReferencia.Size = new System.Drawing.Size(197, 20);
+            this.txtReferencia.TabIndex = 6;
+            // 
+            // lblRef
+            // 
+            this.lblRef.AutoSize = true;
+            this.lblRef.Location = new System.Drawing.Point(3, 172);
+            this.lblRef.Name = "lblRef";
+            this.lblRef.Size = new System.Drawing.Size(59, 13);
+            this.lblRef.TabIndex = 5;
+            this.lblRef.Text = "Referencia";
             // 
             // label3
             // 
@@ -120,6 +173,8 @@ namespace WAMagno.UI
             // 
             // gridPronostico
             // 
+            this.gridPronostico.DataMember = "PronosticoStock";
+            this.gridPronostico.DataSource = this.magnoDataSet1;
             this.gridPronostico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridPronostico.Location = new System.Drawing.Point(0, 0);
             this.gridPronostico.MainView = this.gvPronostico;
@@ -131,65 +186,95 @@ namespace WAMagno.UI
             // 
             // gvPronostico
             // 
+            this.gvPronostico.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colDia,
+            this.colStock,
+            this.colStock_Inicial,
+            this.colADU,
+            this.colCodigo,
+            this.colReferencia,
+            this.colDescripcion,
+            this.colCantTotalInsumo});
             this.gvPronostico.GridControl = this.gridPronostico;
             this.gvPronostico.Name = "gvPronostico";
             // 
-            // lblRef
+            // magnoDataSet1
             // 
-            this.lblRef.AutoSize = true;
-            this.lblRef.Location = new System.Drawing.Point(3, 172);
-            this.lblRef.Name = "lblRef";
-            this.lblRef.Size = new System.Drawing.Size(59, 13);
-            this.lblRef.TabIndex = 5;
-            this.lblRef.Text = "Referencia";
+            this.magnoDataSet1.DataSetName = "MagnoDataSet";
+            this.magnoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // txtReferencia
+            // colDia
             // 
-            this.txtReferencia.Location = new System.Drawing.Point(6, 197);
-            this.txtReferencia.Name = "txtReferencia";
-            this.txtReferencia.Size = new System.Drawing.Size(197, 20);
-            this.txtReferencia.TabIndex = 6;
+            this.colDia.FieldName = "Dia";
+            this.colDia.Name = "colDia";
+            this.colDia.Visible = true;
+            this.colDia.VisibleIndex = 0;
             // 
-            // txtCodigoBodega
+            // colStock
             // 
-            this.txtCodigoBodega.Location = new System.Drawing.Point(6, 259);
-            this.txtCodigoBodega.Name = "txtCodigoBodega";
-            this.txtCodigoBodega.Size = new System.Drawing.Size(197, 20);
-            this.txtCodigoBodega.TabIndex = 8;
+            this.colStock.FieldName = "Stock";
+            this.colStock.Name = "colStock";
+            this.colStock.Visible = true;
+            this.colStock.VisibleIndex = 1;
             // 
-            // label4
+            // colStock_Inicial
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 234);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Código Bodega";
+            this.colStock_Inicial.FieldName = "Stock_Inicial";
+            this.colStock_Inicial.Name = "colStock_Inicial";
+            this.colStock_Inicial.Visible = true;
+            this.colStock_Inicial.VisibleIndex = 2;
             // 
-            // buttonBuscar
+            // colADU
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(128, 299);
-            this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
-            this.buttonBuscar.TabIndex = 9;
-            this.buttonBuscar.Text = "Buscar";
-            this.buttonBuscar.UseVisualStyleBackColor = true;
-            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
+            this.colADU.FieldName = "ADU";
+            this.colADU.Name = "colADU";
+            this.colADU.Visible = true;
+            this.colADU.VisibleIndex = 3;
+            // 
+            // colCodigo
+            // 
+            this.colCodigo.FieldName = "Codigo";
+            this.colCodigo.Name = "colCodigo";
+            this.colCodigo.Visible = true;
+            this.colCodigo.VisibleIndex = 4;
+            // 
+            // colReferencia
+            // 
+            this.colReferencia.FieldName = "Referencia";
+            this.colReferencia.Name = "colReferencia";
+            this.colReferencia.Visible = true;
+            this.colReferencia.VisibleIndex = 5;
+            // 
+            // colDescripcion
+            // 
+            this.colDescripcion.FieldName = "Descripcion";
+            this.colDescripcion.Name = "colDescripcion";
+            this.colDescripcion.Visible = true;
+            this.colDescripcion.VisibleIndex = 6;
+            // 
+            // colCantTotalInsumo
+            // 
+            this.colCantTotalInsumo.FieldName = "CantTotalInsumo";
+            this.colCantTotalInsumo.Name = "colCantTotalInsumo";
+            this.colCantTotalInsumo.Visible = true;
+            this.colCantTotalInsumo.VisibleIndex = 7;
             // 
             // PronosticoStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "PronosticoStock";
-            this.Text = "PronosticoStock";
+            this.Text = "Pronostico Stock";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridPronostico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPronostico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magnoDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,5 +295,14 @@ namespace WAMagno.UI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtReferencia;
         private System.Windows.Forms.Button buttonBuscar;
+        private MagnoDataSet magnoDataSet1;
+        private DevExpress.XtraGrid.Columns.GridColumn colDia;
+        private DevExpress.XtraGrid.Columns.GridColumn colStock;
+        private DevExpress.XtraGrid.Columns.GridColumn colStock_Inicial;
+        private DevExpress.XtraGrid.Columns.GridColumn colADU;
+        private DevExpress.XtraGrid.Columns.GridColumn colCodigo;
+        private DevExpress.XtraGrid.Columns.GridColumn colReferencia;
+        private DevExpress.XtraGrid.Columns.GridColumn colDescripcion;
+        private DevExpress.XtraGrid.Columns.GridColumn colCantTotalInsumo;
     }
 }

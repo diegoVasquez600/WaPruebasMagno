@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using DAO;
-using System.Threading.Tasks;
+﻿using DAO;
+using System;
 using System.Data;
 
 namespace DTO
@@ -23,6 +19,6 @@ namespace DTO
             table = new DataTable();
             table = objDAO.PronosticoStock(FechaInicial, FechaFinal, Referencia, CodigoBodega);
             return table;
-        } 
+        }
     }
 }
