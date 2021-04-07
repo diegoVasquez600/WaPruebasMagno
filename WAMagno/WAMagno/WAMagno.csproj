@@ -54,11 +54,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MagnoDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MagnoDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Models\Pronostico.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,17 +76,6 @@
     <EmbeddedResource Include="UI\PronosticoStock.resx">
       <DependentUpon>PronosticoStock.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="MagnoDataSet.xsc">
-      <DependentUpon>MagnoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="MagnoDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MagnoDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MagnoDataSet.xss">
-      <DependentUpon>MagnoDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

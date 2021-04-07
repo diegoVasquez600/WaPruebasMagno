@@ -43,7 +43,6 @@ namespace WAMagno.UI
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridPronostico = new DevExpress.XtraGrid.GridControl();
             this.gvPronostico = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.magnoDataSet1 = new WAMagno.MagnoDataSet();
             this.colDia = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStock = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStock_Inicial = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -56,7 +55,6 @@ namespace WAMagno.UI
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPronostico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPronostico)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.magnoDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -174,7 +172,6 @@ namespace WAMagno.UI
             // gridPronostico
             // 
             this.gridPronostico.DataMember = "PronosticoStock";
-            this.gridPronostico.DataSource = this.magnoDataSet1;
             this.gridPronostico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridPronostico.Location = new System.Drawing.Point(0, 0);
             this.gridPronostico.MainView = this.gvPronostico;
@@ -197,67 +194,7 @@ namespace WAMagno.UI
             this.colCantTotalInsumo});
             this.gvPronostico.GridControl = this.gridPronostico;
             this.gvPronostico.Name = "gvPronostico";
-            // 
-            // magnoDataSet1
-            // 
-            this.magnoDataSet1.DataSetName = "MagnoDataSet";
-            this.magnoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // colDia
-            // 
-            this.colDia.FieldName = "Dia";
-            this.colDia.Name = "colDia";
-            this.colDia.Visible = true;
-            this.colDia.VisibleIndex = 0;
-            // 
-            // colStock
-            // 
-            this.colStock.FieldName = "Stock";
-            this.colStock.Name = "colStock";
-            this.colStock.Visible = true;
-            this.colStock.VisibleIndex = 1;
-            // 
-            // colStock_Inicial
-            // 
-            this.colStock_Inicial.FieldName = "Stock_Inicial";
-            this.colStock_Inicial.Name = "colStock_Inicial";
-            this.colStock_Inicial.Visible = true;
-            this.colStock_Inicial.VisibleIndex = 2;
-            // 
-            // colADU
-            // 
-            this.colADU.FieldName = "ADU";
-            this.colADU.Name = "colADU";
-            this.colADU.Visible = true;
-            this.colADU.VisibleIndex = 3;
-            // 
-            // colCodigo
-            // 
-            this.colCodigo.FieldName = "Codigo";
-            this.colCodigo.Name = "colCodigo";
-            this.colCodigo.Visible = true;
-            this.colCodigo.VisibleIndex = 4;
-            // 
-            // colReferencia
-            // 
-            this.colReferencia.FieldName = "Referencia";
-            this.colReferencia.Name = "colReferencia";
-            this.colReferencia.Visible = true;
-            this.colReferencia.VisibleIndex = 5;
-            // 
-            // colDescripcion
-            // 
-            this.colDescripcion.FieldName = "Descripcion";
-            this.colDescripcion.Name = "colDescripcion";
-            this.colDescripcion.Visible = true;
-            this.colDescripcion.VisibleIndex = 6;
-            // 
-            // colCantTotalInsumo
-            // 
-            this.colCantTotalInsumo.FieldName = "CantTotalInsumo";
-            this.colCantTotalInsumo.Name = "colCantTotalInsumo";
-            this.colCantTotalInsumo.Visible = true;
-            this.colCantTotalInsumo.VisibleIndex = 7;
+
             // 
             // PronosticoStock
             // 
@@ -274,7 +211,6 @@ namespace WAMagno.UI
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridPronostico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPronostico)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.magnoDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -295,7 +231,6 @@ namespace WAMagno.UI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtReferencia;
         private System.Windows.Forms.Button buttonBuscar;
-        private MagnoDataSet magnoDataSet1;
         private DevExpress.XtraGrid.Columns.GridColumn colDia;
         private DevExpress.XtraGrid.Columns.GridColumn colStock;
         private DevExpress.XtraGrid.Columns.GridColumn colStock_Inicial;

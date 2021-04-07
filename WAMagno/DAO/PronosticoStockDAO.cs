@@ -21,11 +21,11 @@ namespace DAO
         {
             command.Connection = connection.AbrirConection();
             command.CommandText = "PronosticoStock";
+            command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("@FechaInicial", FechaInicial);
             command.Parameters.AddWithValue("@FechaFinal", FechaFinal);
             command.Parameters.AddWithValue("@Referencia", Referencia);
             command.Parameters.AddWithValue("@CodigoBodega", CodigoBodega);
-            command.CommandType = CommandType.StoredProcedure;
             Reader = command.ExecuteReader();
             table.Load(Reader);
             Reader.Close();

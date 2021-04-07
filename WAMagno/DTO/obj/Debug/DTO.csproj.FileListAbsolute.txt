@@ -1,5 +1,8 @@
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\DTO\bin\Debug\DTO.dll
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\DTO\bin\Debug\DTO.pdb
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\DTO\bin\Debug\DAO.dll
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\DTO\bin\Debug\DAO.pdb
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\DTO\obj\Debug\DTO.csproj.CopyComplete
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\DTO\obj\Debug\DTO.dll

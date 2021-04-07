@@ -7,35 +7,27 @@ namespace WAMagno.UI
 {
     public partial class PronosticoStock : Form
     {
+
+        #region Fields
+
         PronosticoStockDTO objDTO;
         DataTable data;
+
+        #endregion
+
+        #region Constructors
+
         public PronosticoStock()
         {
             InitializeComponent();
             objDTO = new PronosticoStockDTO();
             data = new DataTable();
-        }
+        } 
 
-        private void FillPronosticoStock()
-        {
-            data = objDTO.PronosticoStock(Convert.ToDateTime("2020/01/10"), Convert.ToDateTime("2021/01/01"),
-                "1027464", "CN29");
-            lblRef.Text = fechaInicial.Text;
-            //IEnumerable<Pronostico> pronosticoStock = new List<Pronostico>();
-            //pronosticoStock = (from DataRow dr in data.Rows select new Pronostico()
-            //{
-            //    Dia = Convert.ToDateTime(dr["Dia"].ToString()),
-            //    Stock = float.Parse(dr["Stock"].ToString()),
-            //    Stock_Inical = float.Parse(dr["Stock_Inicial"].ToString()),
-            //    ADU = float.Parse(dr["ADU"].ToString()),
-            //    Codigo = dr["Codigo"].ToString(),
-            //    Referencia = dr["Referencia"].ToString(),
-            //    Descripcion = dr["Descripcion"].ToString(),
-            //    CantTotalInsumo = float.Parse(dr["CantTotalInsumo"].ToString())
-            //}).ToList();
-            gridPronostico.DataSource = data;
+        #endregion
 
-        }
+
+        #region Events
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
@@ -47,6 +39,20 @@ namespace WAMagno.UI
             {
                 MessageBox.Show(ex.Message, "Error");
             }
-        }
+        } 
+
+        #endregion
+
+
+        #region Methods
+
+        private void FillPronosticoStock()
+        {
+
+        } 
+
+        #endregion
+
+
     }
 }

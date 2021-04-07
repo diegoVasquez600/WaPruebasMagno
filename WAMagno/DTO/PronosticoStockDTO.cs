@@ -6,19 +6,21 @@ namespace DTO
 {
     public class PronosticoStockDTO
     {
+        #region Fields
         private DataTable table;
-        private PronosticoStockDAO objDAO;
+        private PronosticoStockDAO objDAO; 
+        #endregion
 
-        public PronosticoStockDTO()
-        {
-            objDAO = new PronosticoStockDAO();
-        }
+        #region Methods
 
         public DataTable PronosticoStock(DateTime FechaInicial, DateTime FechaFinal, string Referencia, string CodigoBodega)
         {
+            objDAO = new PronosticoStockDAO();
             table = new DataTable();
             table = objDAO.PronosticoStock(FechaInicial, FechaFinal, Referencia, CodigoBodega);
             return table;
-        }
+        } 
+
+        #endregion
     }
 }
