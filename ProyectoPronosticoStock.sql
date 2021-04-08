@@ -17,9 +17,9 @@ SELECT @Referenciav = PB.Referencia, @Descripcion = Prod.Descripcion, @Stock_Ini
 	WHILE @FechaActual != @FechaFinal
 	BEGIN
 		SET @FechaActual = DATEADD(DAY, 1, @FechaActual)
-		SET @Stock_Inicial = @Stock - @ADU + @Transito
 		SET @Stock = @Stock_Inicial
-		INSERT INTO @PronosticoStock VALUES(@FechaActual, @Referenciav, @Descripcion, @Stock_Inicial, @Stock, @ADU, @Transito)
+		SET @Stock_Inicial = @Stock - @ADU + @Transito
+		INSERT INTO @PronosticoStock VALUES(@FechaActual, @Referenciav, @Descripcion, @Stock, @Stock_Inicial, @ADU, @Transito)
 			
 		CONTINUE  
 	END  
@@ -34,7 +34,7 @@ DECLARE	@return_value int
 
 EXEC	@return_value = [dbo].[PronosticoStock]
 		@FechaInicial = "2021/03/17",
-		@FechaFinal = "2021/03/30",
+		@FechaFinal = "2021/04/03",
 		@Referencia = N'1004002',
 		@CodigoBodega = 'CN31'
 
