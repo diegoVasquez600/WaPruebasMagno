@@ -12,6 +12,7 @@ namespace WAMagno.Models
         public string Referencia { get; set; }
         public string Descripcion { get; set; }
         public float CantTotalInsumo { get; set; }
+        public int Razon { get; set; }
 
     }
 

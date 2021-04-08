@@ -3,3 +3,4 @@ C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\DAO\bin\Debug\DAO.pdb
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\DAO\obj\Debug\DAO.dll
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\DAO\obj\Debug\DAO.pdb
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\DAO\obj\Debug\DAO.csprojAssemblyReference.cache

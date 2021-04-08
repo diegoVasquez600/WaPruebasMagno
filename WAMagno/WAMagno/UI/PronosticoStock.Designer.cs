@@ -42,19 +42,11 @@ namespace WAMagno.UI
             this.fechaInicial = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridPronostico = new DevExpress.XtraGrid.GridControl();
-            this.gvPronostico = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colDia = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colStock = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colStock_Inicial = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colADU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCodigo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colReferencia = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCantTotalInsumo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridViewPronostico = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPronostico)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvPronostico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewPronostico)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,6 +80,7 @@ namespace WAMagno.UI
             // 
             // txtCodigoBodega
             // 
+            this.txtCodigoBodega.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodigoBodega.Location = new System.Drawing.Point(6, 259);
             this.txtCodigoBodega.Name = "txtCodigoBodega";
             this.txtCodigoBodega.Size = new System.Drawing.Size(197, 20);
@@ -171,30 +164,19 @@ namespace WAMagno.UI
             // 
             // gridPronostico
             // 
-            this.gridPronostico.DataMember = "PronosticoStock";
             this.gridPronostico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridPronostico.Location = new System.Drawing.Point(0, 0);
-            this.gridPronostico.MainView = this.gvPronostico;
+            this.gridPronostico.MainView = this.gridViewPronostico;
             this.gridPronostico.Name = "gridPronostico";
             this.gridPronostico.Size = new System.Drawing.Size(591, 450);
             this.gridPronostico.TabIndex = 0;
             this.gridPronostico.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvPronostico});
+            this.gridViewPronostico});
             // 
-            // gvPronostico
+            // gridViewPronostico
             // 
-            this.gvPronostico.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colDia,
-            this.colStock,
-            this.colStock_Inicial,
-            this.colADU,
-            this.colCodigo,
-            this.colReferencia,
-            this.colDescripcion,
-            this.colCantTotalInsumo});
-            this.gvPronostico.GridControl = this.gridPronostico;
-            this.gvPronostico.Name = "gvPronostico";
-
+            this.gridViewPronostico.GridControl = this.gridPronostico;
+            this.gridViewPronostico.Name = "gridViewPronostico";
             // 
             // PronosticoStock
             // 
@@ -210,7 +192,7 @@ namespace WAMagno.UI
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridPronostico)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvPronostico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewPronostico)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -219,8 +201,6 @@ namespace WAMagno.UI
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private DevExpress.XtraGrid.GridControl gridPronostico;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvPronostico;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker fechaFinal;
         private System.Windows.Forms.Label label2;
@@ -231,13 +211,7 @@ namespace WAMagno.UI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtReferencia;
         private System.Windows.Forms.Button buttonBuscar;
-        private DevExpress.XtraGrid.Columns.GridColumn colDia;
-        private DevExpress.XtraGrid.Columns.GridColumn colStock;
-        private DevExpress.XtraGrid.Columns.GridColumn colStock_Inicial;
-        private DevExpress.XtraGrid.Columns.GridColumn colADU;
-        private DevExpress.XtraGrid.Columns.GridColumn colCodigo;
-        private DevExpress.XtraGrid.Columns.GridColumn colReferencia;
-        private DevExpress.XtraGrid.Columns.GridColumn colDescripcion;
-        private DevExpress.XtraGrid.Columns.GridColumn colCantTotalInsumo;
+        private DevExpress.XtraGrid.GridControl gridPronostico;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewPronostico;
     }
 }

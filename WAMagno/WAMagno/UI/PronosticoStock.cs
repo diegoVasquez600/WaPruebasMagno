@@ -48,7 +48,7 @@ namespace WAMagno.UI
 
         private void FillPronosticoStock()
         {
-
+            gridPronostico.DataSource = objDTO.PronosticoStock(DateTime.Parse(fechaInicial.Text), DateTime.Parse(fechaFinal.Text), txtReferencia.Text, txtCodigoBodega.Text);
         } 
 
         #endregion
