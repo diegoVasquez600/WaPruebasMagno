@@ -1,9 +1,9 @@
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\DevExpress.RichEdit.v20.2.Core.xml
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\ru\DevExpress.XtraTreeList.v20.2.resources.dll
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.csprojAssemblyReference.cache
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.Properties.Resources.resources
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.UI.PronosticoStock.resources
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.csproj.GenerateResource.cache
-C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.exe.licenses
-C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.csproj.CoreCompileInputs.cache
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\WAMagno.exe.config
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\WAMagno.exe
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\WAMagno.pdb
@@ -38,7 +38,6 @@ C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\DevExpress.
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\DevExpress.Pdf.v20.2.Drawing.xml
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\DevExpress.Sparkline.v20.2.Core.xml
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\DevExpress.XtraBars.v20.2.xml
-C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\DevExpress.RichEdit.v20.2.Core.xml
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\DevExpress.XtraTreeList.v20.2.xml
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\DevExpress.Office.v20.2.Core.xml
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\de\DevExpress.Data.v20.2.resources.dll
@@ -88,11 +87,13 @@ C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\ru\DevExpre
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\de\DevExpress.XtraTreeList.v20.2.resources.dll
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\es\DevExpress.XtraTreeList.v20.2.resources.dll
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\ja\DevExpress.XtraTreeList.v20.2.resources.dll
-C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\ru\DevExpress.XtraTreeList.v20.2.resources.dll
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\de\DevExpress.Office.v20.2.Core.resources.dll
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\es\DevExpress.Office.v20.2.Core.resources.dll
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\ja\DevExpress.Office.v20.2.Core.resources.dll
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\ru\DevExpress.Office.v20.2.Core.resources.dll
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.UI.HistorialRazones.resources
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.exe.licenses
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.csproj.CoreCompileInputs.cache
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.csproj.CopyComplete
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.exe
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.pdb

@@ -9,12 +9,15 @@ AS
     SET @FechaActual = @FechaInicial
     WHILE @FechaActual != @FechaFinal
     BEGIN
-		SET @FechaActual = DATEADD(MONTH, 1, @FechaActual)
-		PRINT(@FechaActual)
+		 ------ SET @FechaActual = DATEADD(MONTH, 1, @FechaActual) ------
 		CONTINUE  
 	END  
 GO
 
 EXEC SeguimientoHistorial
 @FechaInicial = "2021/03/17",
-@FechaFinal = "2021/04/03"
+@FechaFinal = "2021/04/30"
+
+SELECT * FROM HistoricoProyecciones_julian
+
+SELECT * FROM Tbl_HistorialStockMP

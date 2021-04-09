@@ -1,7 +1,7 @@
 ﻿
 namespace WAMagno.UI
 {
-    partial class PronosticoStock
+    partial class HistorialRazones
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,9 @@ namespace WAMagno.UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistorialRazones));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonRazon = new System.Windows.Forms.Button();
-            this.buttonBuscar = new System.Windows.Forms.Button();
+            this.buttonBuscarHist = new System.Windows.Forms.Button();
             this.txtCodigoBodega = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtReferencia = new System.Windows.Forms.TextBox();
@@ -44,9 +42,8 @@ namespace WAMagno.UI
             this.label1 = new System.Windows.Forms.Label();
             this.fechaInicial = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.gridPronostico = new DevExpress.XtraGrid.GridControl();
-            this.histRazonesDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridViewPronostico = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridHistRazones = new DevExpress.XtraGrid.GridControl();
+            this.gridViewRazones = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colDia = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colReferencia = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -54,22 +51,18 @@ namespace WAMagno.UI
             this.colStock = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colADU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTransito = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colRazon = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.listRazones = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.colIdRazon = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCodigoBodega = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridPronostico)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.histRazonesDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewPronostico)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listRazones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridHistRazones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewRazones)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel1.Controls.Add(this.buttonRazon);
-            this.panel1.Controls.Add(this.buttonBuscar);
+            this.panel1.Controls.Add(this.buttonBuscarHist);
             this.panel1.Controls.Add(this.txtCodigoBodega);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtReferencia);
@@ -80,32 +73,20 @@ namespace WAMagno.UI
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.fechaInicial);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(209, 450);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
-            // buttonRazon
+            // buttonBuscarHist
             // 
-            this.buttonRazon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRazon.Location = new System.Drawing.Point(10, 380);
-            this.buttonRazon.Name = "buttonRazon";
-            this.buttonRazon.Size = new System.Drawing.Size(191, 27);
-            this.buttonRazon.TabIndex = 10;
-            this.buttonRazon.Text = "Historico Razones";
-            this.buttonRazon.UseVisualStyleBackColor = true;
-            this.buttonRazon.Click += new System.EventHandler(this.buttonRazon_Click);
-            // 
-            // buttonBuscar
-            // 
-            this.buttonBuscar.Location = new System.Drawing.Point(128, 299);
-            this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
-            this.buttonBuscar.TabIndex = 9;
-            this.buttonBuscar.Text = "Buscar";
-            this.buttonBuscar.UseVisualStyleBackColor = true;
-            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
+            this.buttonBuscarHist.Location = new System.Drawing.Point(12, 318);
+            this.buttonBuscarHist.Name = "buttonBuscarHist";
+            this.buttonBuscarHist.Size = new System.Drawing.Size(174, 33);
+            this.buttonBuscarHist.TabIndex = 2;
+            this.buttonBuscarHist.Text = "Buscar";
+            this.buttonBuscarHist.UseVisualStyleBackColor = true;
             // 
             // txtCodigoBodega
             // 
@@ -118,6 +99,7 @@ namespace WAMagno.UI
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(3, 234);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 13);
@@ -134,6 +116,7 @@ namespace WAMagno.UI
             // lblRef
             // 
             this.lblRef.AutoSize = true;
+            this.lblRef.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblRef.Location = new System.Drawing.Point(3, 172);
             this.lblRef.Name = "lblRef";
             this.lblRef.Size = new System.Drawing.Size(59, 13);
@@ -184,30 +167,28 @@ namespace WAMagno.UI
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.gridPronostico);
+            this.panel2.Controls.Add(this.gridHistRazones);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(209, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(591, 450);
-            this.panel2.TabIndex = 1;
+            this.panel2.TabIndex = 2;
             // 
-            // gridPronostico
+            // gridHistRazones
             // 
-            this.gridPronostico.DataSource = this.histRazonesDataSetBindingSource;
-            this.gridPronostico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridPronostico.Location = new System.Drawing.Point(0, 0);
-            this.gridPronostico.MainView = this.gridViewPronostico;
-            this.gridPronostico.Name = "gridPronostico";
-            this.gridPronostico.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.listRazones});
-            this.gridPronostico.Size = new System.Drawing.Size(591, 450);
-            this.gridPronostico.TabIndex = 0;
-            this.gridPronostico.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewPronostico});
+            this.gridHistRazones.DataMember = "GetHistRazones";
+            this.gridHistRazones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridHistRazones.Location = new System.Drawing.Point(0, 0);
+            this.gridHistRazones.MainView = this.gridViewRazones;
+            this.gridHistRazones.Name = "gridHistRazones";
+            this.gridHistRazones.Size = new System.Drawing.Size(591, 450);
+            this.gridHistRazones.TabIndex = 3;
+            this.gridHistRazones.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewRazones});
             // 
-            // gridViewPronostico
+            // gridViewRazones
             // 
-            this.gridViewPronostico.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridViewRazones.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colDia,
             this.colReferencia,
             this.colDescripcion,
@@ -215,15 +196,10 @@ namespace WAMagno.UI
             this.colStock,
             this.colADU,
             this.colTransito,
-            this.colRazon,
+            this.colIdRazon,
             this.colCodigoBodega});
-            gridFormatRule1.ApplyToRow = true;
-            gridFormatRule1.Name = "Format0";
-            gridFormatRule1.Rule = null;
-            this.gridViewPronostico.FormatRules.Add(gridFormatRule1);
-            this.gridViewPronostico.GridControl = this.gridPronostico;
-            this.gridViewPronostico.Name = "gridViewPronostico";
-            this.gridViewPronostico.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridViewPronostico_RowCellStyle);
+            this.gridViewRazones.GridControl = this.gridHistRazones;
+            this.gridViewRazones.Name = "gridViewRazones";
             // 
             // colDia
             // 
@@ -274,20 +250,12 @@ namespace WAMagno.UI
             this.colTransito.Visible = true;
             this.colTransito.VisibleIndex = 6;
             // 
-            // colRazon
+            // colIdRazon
             // 
-            this.colRazon.ColumnEdit = this.listRazones;
-            this.colRazon.FieldName = "Razon";
-            this.colRazon.Name = "colRazon";
-            this.colRazon.Visible = true;
-            this.colRazon.VisibleIndex = 7;
-            // 
-            // listRazones
-            // 
-            this.listRazones.AutoHeight = false;
-            this.listRazones.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.listRazones.Name = "listRazones";
+            this.colIdRazon.FieldName = "IdRazon";
+            this.colIdRazon.Name = "colIdRazon";
+            this.colIdRazon.Visible = true;
+            this.colIdRazon.VisibleIndex = 7;
             // 
             // colCodigoBodega
             // 
@@ -296,23 +264,21 @@ namespace WAMagno.UI
             this.colCodigoBodega.Visible = true;
             this.colCodigoBodega.VisibleIndex = 8;
             // 
-            // PronosticoStock
+            // HistorialRazones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "PronosticoStock";
-            this.Text = "Pronostico Stock";
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Name = "HistorialRazones";
+            this.Text = "Historico Razones";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridPronostico)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.histRazonesDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewPronostico)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listRazones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridHistRazones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewRazones)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -320,21 +286,19 @@ namespace WAMagno.UI
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtCodigoBodega;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtReferencia;
+        private System.Windows.Forms.Label lblRef;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker fechaFinal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker fechaInicial;
-        private System.Windows.Forms.Label lblRef;
-        private System.Windows.Forms.TextBox txtCodigoBodega;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtReferencia;
-        private System.Windows.Forms.Button buttonBuscar;
-        private DevExpress.XtraGrid.GridControl gridPronostico;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridViewPronostico;
-        private System.Windows.Forms.Button buttonRazon;
-        private System.Windows.Forms.BindingSource histRazonesDataSetBindingSource;
+        private System.Windows.Forms.Button buttonBuscarHist;
+        private System.Windows.Forms.Panel panel2;
+        private DevExpress.XtraGrid.GridControl gridHistRazones;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewRazones;
         private DevExpress.XtraGrid.Columns.GridColumn colDia;
         private DevExpress.XtraGrid.Columns.GridColumn colReferencia;
         private DevExpress.XtraGrid.Columns.GridColumn colDescripcion;
@@ -342,8 +306,7 @@ namespace WAMagno.UI
         private DevExpress.XtraGrid.Columns.GridColumn colStock;
         private DevExpress.XtraGrid.Columns.GridColumn colADU;
         private DevExpress.XtraGrid.Columns.GridColumn colTransito;
-        private DevExpress.XtraGrid.Columns.GridColumn colRazon;
-        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox listRazones;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdRazon;
         private DevExpress.XtraGrid.Columns.GridColumn colCodigoBodega;
     }
 }
