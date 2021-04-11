@@ -58,11 +58,11 @@
     <Compile Include="Models\Razones.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\HistorialRazones.cs">
+    <Compile Include="UI\Razones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\HistorialRazones.Designer.cs">
-      <DependentUpon>HistorialRazones.cs</DependentUpon>
+    <Compile Include="UI\Razones.Designer.cs">
+      <DependentUpon>Razones.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\PronosticoStock.cs">
       <SubType>Form</SubType>
@@ -80,8 +80,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\HistorialRazones.resx">
-      <DependentUpon>HistorialRazones.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Razones.resx">
+      <DependentUpon>Razones.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\PronosticoStock.resx">

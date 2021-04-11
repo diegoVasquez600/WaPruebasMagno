@@ -91,9 +91,9 @@ C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\de\DevExpre
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\es\DevExpress.Office.v20.2.Core.resources.dll
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\ja\DevExpress.Office.v20.2.Core.resources.dll
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\bin\Debug\ru\DevExpress.Office.v20.2.Core.resources.dll
-C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.UI.HistorialRazones.resources
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.exe.licenses
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.csproj.CoreCompileInputs.cache
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.csproj.CopyComplete
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.exe
 C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.pdb
+C:\Users\diego\source\repos\WaPruebasMagno\WAMagno\WAMagno\obj\Debug\WAMagno.UI.Razones.resources

@@ -8,7 +8,7 @@ namespace DTO
     {
         #region Fields
         private DataTable table;
-        private PronosticoStockDAO objDAO; 
+        private PronosticoStockDAO objDAO;
         #endregion
 
         #region Methods
@@ -19,7 +19,7 @@ namespace DTO
             table = new DataTable();
             table = objDAO.PronosticoStock(FechaInicial, FechaFinal, Referencia, CodigoBodega);
             return table;
-        } 
+        }
 
         #endregion
     }

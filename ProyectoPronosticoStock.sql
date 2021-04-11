@@ -69,7 +69,7 @@ EXEC	@return_value = [dbo].[PronosticoStock]
 		@Referencia = N'1004002',
 		@CodigoBodega = 'CN31'
 
-SELECT DATEDIFF (DAY, '2021/03/17', '2021/04/03')
+GO
 
 
 ALTER PROC GetHistRazones
@@ -81,4 +81,15 @@ AS
 SELECT HR.Dia, HR.Referencia, HR.Descripcion, HR.Stock_Inicial, HR.Stock, HR.ADU, HR.Transito, RZ.Razon, HR.CodigoBodega FROM HistRazon HR
 INNER JOIN Razones RZ ON HR.IdRazon = RZ.IdRazon
 WHERE Referencia = @Referencia AND CodigoBodega = @CodigoBodega AND (Dia BETWEEN @FechaInicial AND @FechaFinal)
+GO
+
+CREATE PROC GetRazones 
+AS
+	SELECT * FROM Razones
+GO
+
+CREATE PROC InsertarRazon
+@Razon VARCHAR(50)
+AS 
+	INSERT INTO Razones VALUES(@Razon)
 GO

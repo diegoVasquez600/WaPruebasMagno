@@ -30,7 +30,7 @@ namespace WAMagno.UI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonRazon = new System.Windows.Forms.Button();
             this.buttonBuscar = new System.Windows.Forms.Button();
@@ -93,7 +93,7 @@ namespace WAMagno.UI
             this.buttonRazon.Name = "buttonRazon";
             this.buttonRazon.Size = new System.Drawing.Size(191, 27);
             this.buttonRazon.TabIndex = 10;
-            this.buttonRazon.Text = "Historico Razones";
+            this.buttonRazon.Text = "Razones";
             this.buttonRazon.UseVisualStyleBackColor = true;
             this.buttonRazon.Click += new System.EventHandler(this.buttonRazon_Click);
             // 
@@ -217,10 +217,10 @@ namespace WAMagno.UI
             this.colTransito,
             this.colRazon,
             this.colCodigoBodega});
-            gridFormatRule1.ApplyToRow = true;
-            gridFormatRule1.Name = "Format0";
-            gridFormatRule1.Rule = null;
-            this.gridViewPronostico.FormatRules.Add(gridFormatRule1);
+            gridFormatRule2.ApplyToRow = true;
+            gridFormatRule2.Name = "Format0";
+            gridFormatRule2.Rule = null;
+            this.gridViewPronostico.FormatRules.Add(gridFormatRule2);
             this.gridViewPronostico.GridControl = this.gridPronostico;
             this.gridViewPronostico.Name = "gridViewPronostico";
             this.gridViewPronostico.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridViewPronostico_RowCellStyle);
