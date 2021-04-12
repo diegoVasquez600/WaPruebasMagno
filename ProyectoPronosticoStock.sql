@@ -29,7 +29,7 @@ SELECT @Referenciav = PB.Referencia, @Descripcion = Prod.Descripcion, @Stock_Ini
 		CONTINUE  
 	END  
 	
-SELECT Dia, Referencia, Descripcion, Stock_Inicial, Stock, ADU, Transito, rz.Razon, CodigoBodega FROM HistRazon hz
+SELECT IdHistRazon, Dia, Referencia, Descripcion, Stock_Inicial, Stock, ADU, Transito, rz.Razon, CodigoBodega FROM HistRazon hz
 INNER JOIN Razones rz ON rz.IdRazon = hz.IdRazon
 WHERE (Dia BETWEEN @FechaInicial AND @FechaFinal) AND CodigoBodega = @CodigoBodega
 GO
@@ -83,13 +83,30 @@ INNER JOIN Razones RZ ON HR.IdRazon = RZ.IdRazon
 WHERE Referencia = @Referencia AND CodigoBodega = @CodigoBodega AND (Dia BETWEEN @FechaInicial AND @FechaFinal)
 GO
 
+ALTER PROC ActualizarHistRazones
+@IdHistRazon INT,
+--@Dia DATE,
+--@Referencia NVARCHAR(50),
+--@Descripcion VARCHAR(max),
+--@Stock_Inicial FLOAT,
+--@Stock FLOAT,
+--@ADU FLOAT,
+--@Transito FLOAT,
+@Razon VARCHAR(50)
+--@CodigoBodega NVARCHAR(50)
+AS
+	UPDATE HistRazon SET IdRazon = (SELECT IdRazon FROM Razones WHERE Razon = @Razon) WHERE IdHistRazon = @IdHistRazon
+GO
+
 CREATE PROC GetRazones 
 AS
 	SELECT * FROM Razones
 GO
 
-CREATE PROC InsertarRazon
+CREATE PROC InsertarRazones
 @Razon VARCHAR(50)
 AS 
 	INSERT INTO Razones VALUES(@Razon)
 GO
+
+EXEC InsertarRazones

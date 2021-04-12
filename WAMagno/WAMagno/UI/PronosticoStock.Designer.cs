@@ -29,8 +29,7 @@ namespace WAMagno.UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonRazon = new System.Windows.Forms.Button();
             this.buttonBuscar = new System.Windows.Forms.Button();
@@ -45,8 +44,8 @@ namespace WAMagno.UI
             this.fechaInicial = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridPronostico = new DevExpress.XtraGrid.GridControl();
-            this.histRazonesDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridViewPronostico = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colIdHistRazon = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDia = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colReferencia = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -55,12 +54,11 @@ namespace WAMagno.UI
             this.colADU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTransito = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colRazon = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.listRazones = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.colCodigoBodega = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.listRazones = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPronostico)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.histRazonesDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPronostico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listRazones)).BeginInit();
             this.SuspendLayout();
@@ -193,7 +191,6 @@ namespace WAMagno.UI
             // 
             // gridPronostico
             // 
-            this.gridPronostico.DataSource = this.histRazonesDataSetBindingSource;
             this.gridPronostico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridPronostico.Location = new System.Drawing.Point(0, 0);
             this.gridPronostico.MainView = this.gridViewPronostico;
@@ -208,6 +205,7 @@ namespace WAMagno.UI
             // gridViewPronostico
             // 
             this.gridViewPronostico.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colIdHistRazon,
             this.colDia,
             this.colReferencia,
             this.colDescripcion,
@@ -217,62 +215,69 @@ namespace WAMagno.UI
             this.colTransito,
             this.colRazon,
             this.colCodigoBodega});
-            gridFormatRule2.ApplyToRow = true;
-            gridFormatRule2.Name = "Format0";
-            gridFormatRule2.Rule = null;
-            this.gridViewPronostico.FormatRules.Add(gridFormatRule2);
+            gridFormatRule1.ApplyToRow = true;
+            gridFormatRule1.Name = "Format0";
+            gridFormatRule1.Rule = null;
+            this.gridViewPronostico.FormatRules.Add(gridFormatRule1);
             this.gridViewPronostico.GridControl = this.gridPronostico;
             this.gridViewPronostico.Name = "gridViewPronostico";
             this.gridViewPronostico.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridViewPronostico_RowCellStyle);
+            // 
+            // colIdHistRazon
+            // 
+            this.colIdHistRazon.FieldName = "IdHistRazon";
+            this.colIdHistRazon.Name = "colIdHistRazon";
+            this.colIdHistRazon.Visible = true;
+            this.colIdHistRazon.VisibleIndex = 0;
             // 
             // colDia
             // 
             this.colDia.FieldName = "Dia";
             this.colDia.Name = "colDia";
             this.colDia.Visible = true;
-            this.colDia.VisibleIndex = 0;
+            this.colDia.VisibleIndex = 1;
             // 
             // colReferencia
             // 
             this.colReferencia.FieldName = "Referencia";
             this.colReferencia.Name = "colReferencia";
             this.colReferencia.Visible = true;
-            this.colReferencia.VisibleIndex = 1;
+            this.colReferencia.VisibleIndex = 2;
             // 
             // colDescripcion
             // 
             this.colDescripcion.FieldName = "Descripcion";
             this.colDescripcion.Name = "colDescripcion";
             this.colDescripcion.Visible = true;
-            this.colDescripcion.VisibleIndex = 2;
+            this.colDescripcion.VisibleIndex = 3;
             // 
             // colStock_Inicial
             // 
             this.colStock_Inicial.FieldName = "Stock_Inicial";
             this.colStock_Inicial.Name = "colStock_Inicial";
             this.colStock_Inicial.Visible = true;
-            this.colStock_Inicial.VisibleIndex = 3;
+            this.colStock_Inicial.VisibleIndex = 4;
             // 
             // colStock
             // 
             this.colStock.FieldName = "Stock";
             this.colStock.Name = "colStock";
             this.colStock.Visible = true;
-            this.colStock.VisibleIndex = 4;
+            this.colStock.VisibleIndex = 5;
             // 
             // colADU
             // 
             this.colADU.FieldName = "ADU";
             this.colADU.Name = "colADU";
             this.colADU.Visible = true;
-            this.colADU.VisibleIndex = 5;
+            this.colADU.VisibleIndex = 6;
             // 
             // colTransito
             // 
             this.colTransito.FieldName = "Transito";
             this.colTransito.Name = "colTransito";
             this.colTransito.Visible = true;
-            this.colTransito.VisibleIndex = 6;
+            this.colTransito.VisibleIndex = 7;
             // 
             // colRazon
             // 
@@ -280,7 +285,14 @@ namespace WAMagno.UI
             this.colRazon.FieldName = "Razon";
             this.colRazon.Name = "colRazon";
             this.colRazon.Visible = true;
-            this.colRazon.VisibleIndex = 7;
+            this.colRazon.VisibleIndex = 8;
+            // 
+            // colCodigoBodega
+            // 
+            this.colCodigoBodega.FieldName = "CodigoBodega";
+            this.colCodigoBodega.Name = "colCodigoBodega";
+            this.colCodigoBodega.Visible = true;
+            this.colCodigoBodega.VisibleIndex = 9;
             // 
             // listRazones
             // 
@@ -288,13 +300,6 @@ namespace WAMagno.UI
             this.listRazones.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.listRazones.Name = "listRazones";
-            // 
-            // colCodigoBodega
-            // 
-            this.colCodigoBodega.FieldName = "CodigoBodega";
-            this.colCodigoBodega.Name = "colCodigoBodega";
-            this.colCodigoBodega.Visible = true;
-            this.colCodigoBodega.VisibleIndex = 8;
             // 
             // PronosticoStock
             // 
@@ -310,7 +315,6 @@ namespace WAMagno.UI
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridPronostico)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.histRazonesDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPronostico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listRazones)).EndInit();
             this.ResumeLayout(false);
@@ -334,7 +338,8 @@ namespace WAMagno.UI
         private DevExpress.XtraGrid.GridControl gridPronostico;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewPronostico;
         private System.Windows.Forms.Button buttonRazon;
-        private System.Windows.Forms.BindingSource histRazonesDataSetBindingSource;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox listRazones;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdHistRazon;
         private DevExpress.XtraGrid.Columns.GridColumn colDia;
         private DevExpress.XtraGrid.Columns.GridColumn colReferencia;
         private DevExpress.XtraGrid.Columns.GridColumn colDescripcion;
@@ -343,7 +348,6 @@ namespace WAMagno.UI
         private DevExpress.XtraGrid.Columns.GridColumn colADU;
         private DevExpress.XtraGrid.Columns.GridColumn colTransito;
         private DevExpress.XtraGrid.Columns.GridColumn colRazon;
-        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox listRazones;
         private DevExpress.XtraGrid.Columns.GridColumn colCodigoBodega;
     }
 }

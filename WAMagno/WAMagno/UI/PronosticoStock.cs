@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraGrid.Views.Grid;
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.Grid;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -48,7 +49,11 @@ namespace WAMagno.UI
 
         private void ListRazones_SelectedValueChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Cambio seleccion");
+            var idHistRazon = gridViewPronostico.GetRowCellValue(gridViewPronostico.FocusedRowHandle, gridViewPronostico.Columns[0]).ToString();
+            var idRazon = gridViewPronostico.ActiveEditor as ComboBoxEdit;
+            objDTO.ActualizarHistRazon(idHistRazon, idRazon.EditValue.ToString());
+            MessageBox.Show("Se ha Actualizado la Razon Correctamente", "Actualizacion Completada");
+            
         }
 
         private void buttonRazon_Click(object sender, EventArgs e)
@@ -60,11 +65,10 @@ namespace WAMagno.UI
         private void gridViewPronostico_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
         {
             GridView View = sender as GridView;
-
             if (e.RowHandle >= 0)
             {
-                string el_stock = View.GetRowCellDisplayText(e.RowHandle, View.Columns["Stock_Inicial"]);
-                if (el_stock == "0,00" || el_stock.Trim() == "")
+                string stock = View.GetRowCellDisplayText(e.RowHandle, View.Columns[5]);
+                if (stock == "0,00" || stock.Trim() == "")
                 {
                     e.Appearance.BackColor = Color.FromArgb(150, Color.Red);
                     e.Appearance.BackColor2 = Color.White;
@@ -83,7 +87,6 @@ namespace WAMagno.UI
             razonesDTO = new RazonesDTO();
             gridPronostico.DataSource = objDTO.PronosticoStock(DateTime.Parse(fechaInicial.Text), DateTime.Parse(fechaFinal.Text), txtReferencia.Text, txtCodigoBodega.Text);
             FillCombo();
-            
         }
 
 

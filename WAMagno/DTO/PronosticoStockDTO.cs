@@ -21,6 +21,12 @@ namespace DTO
             return table;
         }
 
+        public void ActualizarHistRazon(string IdHistRazon, string Razon)
+        {
+            objDAO = new PronosticoStockDAO();
+            objDAO.ActualizarHistRazones(int.Parse(IdHistRazon), Razon);
+        }
+
         #endregion
     }
 }

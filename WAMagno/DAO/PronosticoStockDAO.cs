@@ -32,5 +32,17 @@ namespace DAO
             connection.CerrarConection();
             return table;
         }
+        public void ActualizarHistRazones(int IdHistRazon, string Razon)
+        {
+            command.Connection = connection.AbrirConection();
+            command.CommandText = "ActualizarHistRazones";
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@IdHistRazon", IdHistRazon);
+            command.Parameters.AddWithValue("@Razon", Razon);
+            command.ExecuteNonQuery();
+            command.Parameters.Clear();
+        }
+
+
     }
 }
